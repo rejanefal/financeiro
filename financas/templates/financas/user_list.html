@@ -1,0 +1,10 @@
+{% extends 'financas/master.html' %}
+
+{% block content %}
+    {% for user in users %}
+        <div>
+            <h1><a href="{% url 'user_list_view' pk=post.pk %}">{{ user.name }}</a></h1>
+            <p>{{ user.name|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
